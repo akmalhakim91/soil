@@ -19,7 +19,7 @@ public class EmployeeService {
 
     public List<Employee> getAllEmployees(Integer pageNo, Integer pageSize, String sortBy)
     {
-        Pageable paging = PageRequest.of(pageNo, pageSize, Sort.by(sortBy));
+        Pageable paging = PageRequest.of(pageNo, pageSize, Sort.by(sortBy).descending());
 
         Page<Employee> pagedResult = repo.findAll(paging);
 
