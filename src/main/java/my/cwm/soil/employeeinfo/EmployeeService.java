@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 
+
 @Service
 @RequiredArgsConstructor
 
@@ -32,6 +33,16 @@ public class EmployeeService {
         }
 
     }
+
+    public Employee save(Employee employee){
+        return this.repo.save(employee);
+    }
+
+    public void delete(Long id){
+        this.repo.deleteById(id);
+    }
+
+
 
 
 }

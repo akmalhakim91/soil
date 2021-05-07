@@ -10,6 +10,7 @@ import lombok.Data;
 @Data
 @Entity
 
+//declare table class
 
 public class Employee {
     @Id
